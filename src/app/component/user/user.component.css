@@ -1,0 +1,12 @@
+.title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #666;
+}

@@ -5,7 +5,7 @@ import { UserComponent } from './component/user/user.component'
 import { User } from './types/types'
 import { UserType } from './enum/user.enum'
 import { NgFor } from '@angular/common'
-import { AvatarComponent } from "./component/avatar/avatar.component";
+import { AvatarComponent } from './component/avatar/avatar.component'
 
 const BASE_URL = 'https://api.github.com/users'
 @Component({
@@ -28,7 +28,8 @@ export class AppComponent implements OnInit {
   ]
 
   toggleShow (value: boolean): boolean {
-    return (this.show = !value)
+    this.show = !value
+    return this.show
   }
   ngOnInit () {
     fetch(BASE_URL)
