@@ -17,6 +17,8 @@ export class ProductComponent {
   showForm = false
 
   onProductAdded (product: IProducts) {
+    console.log('Product added:', product)
+    // Add a unique ID to the product
     this.products.push({ ...product, id: Date.now() })
     this.showForm = false
   }

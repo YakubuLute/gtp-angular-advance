@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms'
 // child.component.ts
 import { Component, Output, EventEmitter } from '@angular/core' // ← Import needed
 import { IProducts } from '../../Models/types/types'
@@ -5,15 +6,8 @@ import { IProducts } from '../../Models/types/types'
 @Component({
   selector: 'app-product-form',
   styleUrl: './product-form.component.css',
+  imports: [FormsModule], // <- Import FormsModule for ngModel
   templateUrl: './product-form.component.html',
-  template: `
-    <form (ngSubmit)="onSubmit()">
-      <input [(ngModel)]="productName" placeholder="Product Name" required />
-      <input [(ngModel)]="price" type="number" placeholder="Price" required />
-      <button type="submit">Add Product</button>
-      <button type="button" (click)="onCancel()">Cancel</button>
-    </form>
-  `
 })
 export class ProductFormComponent {
   @Output() productAdded = new EventEmitter<IProducts>() // <- Creates custom event
