@@ -8,3 +8,9 @@ export interface User {
   type: UserType
   [key: string]: any
 }
+
+export interface IProducts {
+  id?: number
+  name: string
+  price: number
+}

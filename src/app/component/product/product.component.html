@@ -1,0 +1,16 @@
+<!-- parent.component.html -->
+<div class="product-manager">
+  <button (click)="showAddForm()" *ngIf="!showForm">Add Product</button>
+
+  <app-product-form
+    *ngIf="showForm"
+    (productAdded)="onProductAdded($event)"
+    (formCancelled)="onFormCancelled()">
+  </app-product-form>
+
+  <div class="product-list">
+    <div *ngFor="let product of products" class="product-item">
+      {{ product.name }} - ${{ product.price }}
+    </div>
+  </div>
+</div>

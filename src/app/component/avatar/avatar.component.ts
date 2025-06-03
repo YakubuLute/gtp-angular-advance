@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core'
-import { User } from '../../types/types'
-import { UserType } from '../../enum/user.enum'
+import { User } from '../../Models/types/types'
+import { UserType } from '../../Models/enum/user.enum'
 
 @Component({
   selector: 'app-avatar',

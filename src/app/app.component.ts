@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import { RouterOutlet } from '@angular/router'
 import { UserComponent } from './component/user/user.component'
-import { User } from './types/types'
-import { UserType } from './enum/user.enum'
+import { User } from './Models/types/types'
 import { NgFor } from '@angular/common'
 import { AvatarComponent } from './component/avatar/avatar.component'
+import { UserType } from './Models/enum/user.enum'
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ import { AvatarComponent } from './component/avatar/avatar.component'
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  private BASE_URL = 'https://api.github.com/users'
+  readonly BASE_URL = 'https://api.github.com/users'
   title = 'advanced-phase'
   show: boolean = true
   profile: User[] = [
