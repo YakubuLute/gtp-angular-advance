@@ -1,1 +1,17 @@
-<p>product-form works!</p>
+<form (ngSubmit)="onSubmit()">
+  <input
+    [(ngModel)]="productName"
+    placeholder="Product Name"
+    required
+    name="productName"
+  />
+  <input
+    [(ngModel)]="price"
+    type="number"
+    placeholder="Price"
+    required
+    name="price"
+  />
+  <button type="submit">Add Product</button>
+  <button type="button" (click)="onCancel()">Cancel</button>
+</form>

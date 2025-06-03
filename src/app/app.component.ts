@@ -6,10 +6,19 @@ import { User } from './Models/types/types'
 import { NgFor } from '@angular/common'
 import { AvatarComponent } from './component/avatar/avatar.component'
 import { UserType } from './Models/enum/user.enum'
+import { ProductFormComponent } from './component/product-form/product-form.component'
+import { ProductComponent } from './component/product/product.component'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, UserComponent, NgFor, AvatarComponent],
+  imports: [
+    RouterOutlet,
+    FormsModule,
+    UserComponent,
+    NgFor,
+    AvatarComponent,
+    ProductComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
