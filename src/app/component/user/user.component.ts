@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core'
 import { User } from '../../Models/types/types'
-import { UserType } from '../../Models/enum/user.enum'
 
 @Component({
   selector: 'app-user',
