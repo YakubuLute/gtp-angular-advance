@@ -7,7 +7,6 @@ import { UserType } from './enum/user.enum'
 import { NgFor } from '@angular/common'
 import { AvatarComponent } from './component/avatar/avatar.component'
 
-const BASE_URL = 'https://api.github.com/users'
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FormsModule, UserComponent, NgFor, AvatarComponent],
@@ -15,6 +14,7 @@ const BASE_URL = 'https://api.github.com/users'
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
+  private BASE_URL = 'https://api.github.com/users'
   title = 'advanced-phase'
   show: boolean = true
   profile: User[] = [
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
     return this.show
   }
   ngOnInit () {
-    fetch(BASE_URL)
+    fetch(this.BASE_URL)
       .then((data: any) => data.json())
       .then((response: User[]) => {
         this.profile = response
