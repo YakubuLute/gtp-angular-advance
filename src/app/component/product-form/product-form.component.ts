@@ -7,7 +7,7 @@ import { IProducts } from '../../Models/types/types'
   selector: 'app-product-form',
   styleUrl: './product-form.component.css',
   imports: [FormsModule], // <- Import FormsModule for ngModel
-  templateUrl: './product-form.component.html',
+  templateUrl: './product-form.component.html'
 })
 export class ProductFormComponent {
   @Output() productAdded = new EventEmitter<IProducts>() // <- Creates custom event

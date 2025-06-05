@@ -5,7 +5,8 @@
   <app-product-form
     *ngIf="showForm"
     (productAdded)="onProductAdded($event)"
-    (formCancelled)="onFormCancelled()">
+    (formCancelled)="onFormCancelled()"
+  >
   </app-product-form>
 
   <div class="product-list">
